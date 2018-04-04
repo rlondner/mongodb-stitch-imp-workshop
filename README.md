@@ -1,4 +1,4 @@
-# Workshop: Build an IoT Temperature Sensor with MongoDB + ElectricImp
+# Workshop: Build an IoT Temperature Sensor with MongoDB Stitch & ElectricImp
 
 ## What We’ll Build
 
@@ -98,7 +98,7 @@ After signing in, you should by default see the Products tab (with no Product). 
 
 1. Navigate to the **Devices** tab and verify that your imp device shows up as unassigned (Type column below)
 
-![image alt text](image_0.png)
+![image alt text](img/image_0.png)
 
 2. Navigate back to the **Products** tab and click *Create a Product* 
 
@@ -108,11 +108,11 @@ After signing in, you should by default see the Products tab (with no Product). 
 
 5. Navigate back to the **Devices** tab, select your device and assign it to the **_Stitch Temp Tracker_** product and **_impExplorer Devices_** device group, as shown in the screenshot below:
 
-![image alt text](image_1.png)
+![image alt text](img/image_1.png)
 
 6. Press *Assign Devices* and *Done*. Verify that your device is now assigned to the proper Product and Group, as shown below:
 
-![image alt text](image_2.png)
+![image alt text](img/image_2.png)
 
 #### Add code, build, and run
 
