@@ -118,15 +118,15 @@ After signing in, you should by default see the Products tab (with no Product). 
 
 Navigate back to the Products tab and select *Development Environment* for the Stitch Temp Tracker product:
 
-![image alt text](image_3.png)
+![image alt text](img/image_3.png)
 
 In the Development Device Groups page, select the **_Code_** link:
 
-![image alt text](image_4.png)
+![image alt text](img/image_4.png)
 
 The Imp IDE has a split window, with a space for the **Agent** code on the left and **Device** code on the right and **Development Device Logs** below. 
 
-![image alt text](image_5.png)
+![image alt text](img/image_5.png)
 
 To add code onto the device do the following:
 
@@ -136,7 +136,7 @@ To add code onto the device do the following:
 
 3. Make sure **Build and ****Force Restart **is selected and click the **Check** button to deploy your code to the device and agent, as show below:
 
-![image alt text](image_6.png)
+![image alt text](img/image_6.png)
 
 ### **B. Create and Import a New Stitch Application**
 
@@ -183,7 +183,7 @@ stitch-cli import
 
 stitch-cli will ask you if you’d like to create a new application. Respond affirmatively, then provide your [Atlas Project ID](https://docs.atlas.mongodb.com/tutorial/manage-project-settings/) and a descriptive name of your choosing for the application, e.g. **_dashboard-tutorial_**. You can find your Atlas Project ID listed on the **Settings** page of the Atlas UI:
 
-![image alt text](image_7.png)
+![image alt text](img/image_7.png)
 
 If you’ve set everything up correctly, stitch-cli will inform you that the app was successfully created and imported.
 
@@ -195,9 +195,9 @@ If your app is created successfully but encounters an import error, fix the erro
 
 Now that you have imported your backend logic with the stitch-cli, take a moment to go to your Stitch Application and review the structure you have just imported.  You can review your application by going to your [Atlas account](https://cloud.mongodb.com/), finding ‘Stitch Apps’ in the left hand menu, and clicking the app that you imported.
 
-Overall, the structure of the app is as follows: 
+Overall, the structure of the app is as follows:
 
-1. **Atlas Cluster**: The Atlas database you connected your application to  
+1. **Atlas Cluster**: The Atlas database you connected your application to.
 
     1. **Config**: The cluster you are connected to  
 
@@ -207,7 +207,7 @@ Overall, the structure of the app is as follows:
 
     3. **Twilio**: An integrated Twilio service that allows you to send text messages in Stitch functions  
 
-    4. **DarkSky**: A generic HTTP service used to make requests to the DarkSky API in Stitch functions  
+    4. **DarkSky**: A generic HTTP service used to make requests to the DarkSky API in Stitch functions
 
 3. **Users**:
 
@@ -247,7 +247,7 @@ To generate a new Stitch API key, open the Stitch Admin Console in your browser 
 
 2. Select the **API Keys** provider then click **CREATE API KEY**.
 
-![image alt text](image_8.png)
+![image alt text](img/image_8.png)
 
 3. Give your new API key a descriptive name (e.g. **_ElectricImp_**) and click **Save**.
 
