@@ -12,11 +12,11 @@ We’ll use ElectricImp to do the following:
 
 We’ll use Stitch to do the following:
 
-* Store the impExplorer’s data in a MongoDB Atlas (hosted database)
+* Store the impExplorer’s data in a MongoDB Atlas cloud database
 
 * Connect your data to a D3.js dashboard 
 
-* Connect your app to additional Services: 
+* Connect your app to additional services: 
 
     * Combine with outside temperature data from DarkSky
 
@@ -90,11 +90,11 @@ Both the device and agent code used in this tutorial can be found in the [reposi
 
 For more information see the [tour of the Imp IDE](https://developer.electricimp.com/gettingstarted/explorer/ide).
 
-To load the code onto the device do the following:
+To load the code onto the device, follow the steps below:
 
 **Create a product and link the device**
 
-After signing in, you should by default see the Products tab (with no Product). Follow the instructions below:
+After signing in, you should by default see the __Products__ tab (with no Product). Follow the instructions below:
 
 1. Navigate to the **Devices** tab and verify that your imp device shows up as unassigned (Type column below)
 
@@ -102,9 +102,9 @@ After signing in, you should by default see the Products tab (with no Product). 
 
 2. Navigate back to the **Products** tab and click *Create a Product* 
 
-3. In the *Create Product* text box, enter **_Stitch Temp Tracker_** (or whichever other text value you like)
+3. In the *Create Product* text box, enter **_Stitch Temp Tracker_** (or whichever value of your liking)
 
-4. In the *Create Development Device* text box, enter **_impExplorer Devices_** (or whichever other text value you like). Click the Create button to create your development environment
+4. In the *Create Development Device* text box, enter **_impExplorer Devices_** (or whichever value of your liking). Click the Create button to create your development environment
 
 5. Navigate back to the **Devices** tab, select your device and assign it to the **_Stitch Temp Tracker_** product and **_impExplorer Devices_** device group, as shown in the screenshot below:
 
@@ -138,7 +138,7 @@ To add code onto the device do the following:
 
 ![image alt text](img/image_6.png)
 
-### **B. Create and Import a New Stitch Application**
+### **B. Create and Import a new Stitch Application**
 
 All of the Stitch components needed to run the dashboard app are available in the [Stitch-ElectricImp Lab Code](http://bit.ly/StitchImp).
 
@@ -156,7 +156,7 @@ We will use the [stitch-cli import](https://docs.mongodb.com/stitch/import-expor
 
 Navigate to the dashboard-initial application directory from the stitch-examples directory:
 
-cd mongodb-stitch-imp-workshop/TempApp/
+`cd mongodb-stitch-imp-workshop/TempApp/`
 
 #### Authenticate a MongoDB Atlas User
 
@@ -164,12 +164,13 @@ To import the pre-configured application directory, users must authenticate with
 
 Pass your Atlas API key and Atlas login e-mail to the [stitch-cli](https://docs-mongodbcom-staging.corp.mongodb.com/stitch/nick/DOCSP-2009/import-export/stitch-cli-reference.html#stitch-cli) to authenticate with MongoDB Atlas:
 
-stitch-cli login --username=<username@email.com> --api-key=<api-key>
+`stitch-cli login --username=<username@email.com> --api-key=<api-key>`
+
 #### Optional: Update MongoDB Atlas Cluster Name
 
-The mongodb-atlas service will attempt to link to an Atlas cluster in your project based on the value of clusterName in its configuration file. The service is pre-configured assuming that your Atlas cluster uses the default name,** ****Cluster0**.
+The mongodb-atlas service will attempt to link to an Atlas cluster in your project based on the value of clusterName in its configuration file. The service is pre-configured assuming that your Atlas cluster uses the default name,** Cluster0**.
 
-If your Atlas cluster is not named Cluster0, edit the value of clusterName in the *mongodb-stitch-imp-workshop/TempApp**/services/mongodb-atlas/config.json* file to match your cluster’s name.
+If your Atlas cluster is not named *Cluster0*, edit the value of clusterName in the *mongodb-stitch-imp-workshop/TempApp/services/mongodb-atlas/config.json* file to match your cluster’s name.
 
 **WARNING**
 
@@ -179,7 +180,7 @@ If the clusterName value doesn’t match a cluster in your Atlas project, Stitch
 
 Run the following command from within the dashboard-initialdirectory to create and populate your Stitch application:
 
-stitch-cli import
+`stitch-cli import`
 
 stitch-cli will ask you if you’d like to create a new application. Respond affirmatively, then provide your [Atlas Project ID](https://docs.atlas.mongodb.com/tutorial/manage-project-settings/) and a descriptive name of your choosing for the application, e.g. **_dashboard-tutorial_**. You can find your Atlas Project ID listed on the **Settings** page of the Atlas UI:
 
@@ -263,13 +264,13 @@ While you’re still in the Stitch Admin Console, if you would like Twilio to se
 
 1. Navigate to the **Values** page.
 
-2. Click the **AdminPhone** value and change it to a phone number that you have access to in the form "+1XXXYYYZZZZ"
+2. Click the **AdminPhone** value and change it to a phone number that you have access to in the form `+1XXXYYYZZZZ`
 
 **Connect your impExplorer and Dashboard using your AppID**
 
 We now need to update both the impExplorer code and the dashboard code to use API key authentication. For this you will also need your App ID, which can be found in the Stitch Admin Console on your **Clients** page. 
 
-To connect Stitch to the Imp – Go back to impCentral, open your project, and replace:
+To connect Stitch to the Imp, go back to impCentral, open your project, and replace:
 
 1. <APP ID> on line 4 with your App ID.
 
@@ -279,7 +280,7 @@ After updating the impExplorer code, make sure your device is powered up, connec
 
 Now we need to connect the client code with the Stitch application so that the dashboard can query and display your data.
 
-Next, open dashboard.js file in TempDashboard:
+Next, open dashboard.js file in the root folder:
 
 **Dashboard.js**
 
@@ -289,11 +290,11 @@ Now, replace:
 
 1. The value of dashboardApiKey on line 2 with your second API key.
 
-### **D. Start the Dashboard **
+### . Start the Dashboard
 
 Finally, to get the dashboard fully running – 
 
-#### **Install Dependencies**
+#### Install Dependencies
 
 Navigate to the TempDashboard directory and run the following command to install all dependencies:
 
